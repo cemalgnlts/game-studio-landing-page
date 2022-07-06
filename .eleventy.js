@@ -6,7 +6,7 @@ function imageShortcode(src, alt, lazy, async, sizes="100w") {
 	const options = {
 		formats: ["webp", "jpeg"],
 		widths: [320, 768, 1024],
-		urlPath: "/assets/images/",
+		urlPath: `${process.env.mode === "prod" ? "/game-developer-studio-page" : ""}/assets/images/`,
 		outputDir: "./docs/assets/images/",
 		filenameFormat(id, src, width, format, options) {
 			const { name } = path.parse(src);
