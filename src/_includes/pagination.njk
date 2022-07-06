@@ -1,0 +1,22 @@
+{% extends "base.njk" %}
+
+{% block main %}
+  <div class="safe-top" data-bg-image="/assets/images/bg_hero_{{ page.url.slice(1, -1) }}.jpg"></div>
+  <div class="container">
+    {{ content | safe }}
+
+    <div class="margin-top-bottom">
+      {%- if pagination.href.previous %}
+        <a href="{{pagination.href.previous | url}}" class="btn">Previous</a>
+      {% endif -%}
+
+      {% for href in pagination.hrefs %}
+        <a class="btn" aria-label="{{ "Go To Page "+loop.index if page.url !== href else "Current Page "+loop.index }}" href="{{href | url}}"{%if page.url === href%} aria-current="true"{%endif%}>{{loop.index}}</a>
+      {%- endfor %}
+
+      {%- if pagination.href.next %}
+        <a href="{{pagination.href.next | url}}" class="btn">Next</a>
+      {% endif -%}
+    </div>
+  </div>
+{% endblock main %}

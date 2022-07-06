@@ -1,0 +1,14 @@
+---
+permalink: "/assets/style/main.css"
+styles:
+  - reset
+  - base
+  - header
+  - home
+  - article
+  - responsive
+---
+
+{%- for style in styles %}
+  {%- include "./_includes/styles/" + style + ".css" %}
+{% endfor -%}

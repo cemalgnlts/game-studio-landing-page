@@ -1,0 +1,80 @@
+{% extends "base.njk" %}
+
+{% import "partials/macros.njk" as macros %}
+
+{% set showcaseGames = sections.games.showcase | getShowcaseGames %}
+
+{% block main %}
+  {# HERO #}
+  <section class="hero">
+    <div class="container">
+      {{ macros.sectionHeader(sections.hero) }}
+
+      {# <button class="hero__cta btn"> #}
+      <a class="hero__cta btn" alt="Go to games page" href="{{sections.hero.ctaButtonHref | url}}">{{sections.hero.ctaButtonText}}</a>
+      {# </button> #}
+    </div>
+
+    <a class="hero__arrow-down" href="#our-games">
+			<img src="{{"/assets/images/arrow-down.svg" | url}}" alt="Scroll to games section.">
+    </a>
+  </section>
+  {# /HERO #}
+
+  {# GAMES  #}
+  <section class="games" id="our-games">
+    <div class="container">
+      {{ macros.sectionHeader(sections.games) }}
+
+      <div class="games__showcase">
+        {% for game in showcaseGames %}
+          {{ macros.gameCard(game) }}
+        {% endfor %}
+      </div>
+
+      <a href="{{sections.games.readMoreButtonUrl | url}}">
+        <button class="btn btn--explore">{{sections.games.readMoreButtonText}}</button>
+      </a>
+    </div>
+  </section>
+  {# /GAMES #}
+
+  {# <section>
+    <div class="container">
+      <h2>Smashboard</h2>
+      <button class="btn">GET NOW</button>
+    </div>
+  </section> #}
+
+  {# COMMENTS #}
+  <section class="comments">
+    <div class="container">
+      {{ macros.sectionHeader(sections.comments) }}
+
+      <div class="comments__showcase">
+        {% for comment in comments %}
+          {{ macros.commentCard(comment) }}
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+  {# /COMMENTS #}
+
+  {# BLOG #}
+  <section class="blog">
+    <div class="container">
+      {{ macros.sectionHeader(sections.blog) }}
+      <div class="blog__showcase">
+        {% for blogpost in collections.blogposts | head(3) %}
+          {{ macros.blogpostCard(blogpost) }}
+        {% endfor %}
+      </div>
+
+      <a href="{{sections.blog.readMoreButtonUrl | url}}">
+        <button class="btn btn--explore">{{sections.blog.readMoreButtonText}}</button>
+      </a>
+    </div>
+  </section>
+  {# /BLOG #}
+{% endblock %}

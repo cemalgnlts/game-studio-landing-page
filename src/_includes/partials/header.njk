@@ -1,0 +1,24 @@
+<div class="container">
+	<a href="{{ "/" | url}}" class="logo" aria-label="Supercell Logo">
+		<img src="{{"/assets/images/logo.png" | url}}" alt="Logo"/>
+  </a>
+
+  <nav class="nav">
+    <ul class="nav__menu">
+      {% for link in nav.links -%}
+        <li class="nav__menu__item">
+          {%- set href = "/"+("" if link === "home" else link+"/") %}
+          <a href="{{href | url}}"{% if page.url === href %} aria-current="page"{% endif %}>{{link | title}}</a>
+        </li>
+      {% endfor -%}
+    </ul>
+
+    <button class="nav__menu__toggler">
+      <svg width="24" height="15" fill="black">
+        <rect width="24" height="2"></rect>
+        <rect width="24" height="2" y="6"></rect>
+        <rect width="24" height="2" y="12"></rect>
+      </svg>
+    </button>
+  </nav>
+</div>

@@ -1,0 +1,23 @@
+---
+title: "Blog"
+layout: pagination.njk
+section: "blog"
+pagination:
+  data: collections.blogposts
+  alias: blogposts
+  size: 9
+permalink: "/blog/{% if pagination.pageNumber > 0 %}{{pagination.pageNumber + 1}}/{% endif %}"
+---
+
+{% from "partials/macros.njk" import sectionHeader,
+blogpostCard %}
+
+{# <a href="#" class="btn">Turn Back</a> #}
+
+{{ sectionHeader(sections.blog) }}
+
+<div class="blog__showcase">
+  {% for blogpost in pagination.items %}
+    {{ blogpostCard(blogpost) }}
+  {% endfor %}
+</div>

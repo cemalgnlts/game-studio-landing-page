@@ -1,0 +1,15 @@
+{
+  "name": "game-landing-page",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "mode=dev eleventy --serve --quiet",
+    "build": "mode=prod eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^2.0.1"
+  }
+}

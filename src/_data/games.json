@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Hay Day",
+    "category": "Farm with friends and family",
+    "cover": "games_thumbnail_hayday.jpg",
+    "link": "https://beeznutzdev.itch.io/overkill"
+  },
+  {
+    "title": "Brawl Stars",
+    "category": "3v3 and battle royale",
+    "cover": "games_thumbnail_brawlstars.jpg",
+    "link": "https://beeznutzdev.itch.io/he-detect"
+  },
+  {
+    "title": "Clash Royale",
+    "category": "Epic real-time card battles",
+    "cover": "games_thumbnail_clashroyale.jpg",
+    "link": "https://beeznutzdev.itch.io/frost-kissed"
+  },
+  {
+    "title": "Clash of Clans",
+    "category": "Lead your clan to victory!",
+    "cover": "games_thumbnail_clashofclans.jpg",
+    "link": "https://beeznutzdev.itch.io/place-holder"
+  },
+  {
+    "title": "Boom Beach",
+    "category": "Build. Plan. Boom!",
+    "cover": "games_thumbnail_boombeach.jpg",
+    "link": "https://beeznutzdev.itch.io/place-holder"
+  }
+]

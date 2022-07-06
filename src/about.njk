@@ -1,0 +1,13 @@
+---
+layout: base.njk
+safeMargin: true
+title: About
+---
+
+{% from "partials/macros.njk" import sectionHeader, profileCard %}
+
+{{ sectionHeader(sections.hero) }}
+
+<div class="profile__showcase">
+  {{ profileCard() }}
+</div>

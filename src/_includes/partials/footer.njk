@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="footer-row">
+
+    <div class="footer-col footer-col--logo">
+			<a href="{{"/" | url}}" class="logo">
+				<img src="{{"/assets/images/logo.png" | url}}" alt="Logo"/>
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h5 class="footer-col__title">Menu</h5>
+      <ul class="footer-col__menu small">
+        {% for link in nav.links %}
+          <li>
+						{%- set href = link if link !== "home" else ""  %}
+            <a href="/{{href | url}}">{{ link | title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5 class="footer-col__title">Social Media</h5>
+      <ul class="footer-col__menu small">
+        {% for link, href in meta.socialMedia %}
+          <li>
+            <a href="/{{link | url}}">{{ link | title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <a href="#" aria-label="Go to top">
+				<img class="go-to-top" src="{{"/assets/images/arrow-top.svg" | url }}" alt="Go To Top">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-row footer-row--end small">
+    <div class="footer-col">
+      <small>Copyright &copy; 2022 <a href="https://github.com/cemalgnlts" class="sign" target="_blank">cemalgnlts</a>. All Rights Reserverd.</small>
+    </div>
+    <div class="footer-col">
+      <small>
+        <a href="#" alt="Terms of Use">Terms of Use</a>
+        <a href="#" alt="Privacy Policy">Privacy Policy</a>
+      </small>
+    </div>
+  </div>
+</div>

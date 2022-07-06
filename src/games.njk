@@ -1,0 +1,19 @@
+---
+title: "Games"
+layout: pagination.njk
+pagination:
+  data: games
+  size: 9
+permalink: "/games/{% if pagination.pageNumber > 0 %}{{pagination.pageNumber + 1}}/{% endif %}"
+---
+
+{% from "partials/macros.njk" import sectionHeader,
+gameCard %}
+
+{{sectionHeader(sections.games)}}
+
+<div class="games__showcase">
+  {% for game in pagination.items %}
+    {{ gameCard(game) }}
+  {% endfor %}
+</div>

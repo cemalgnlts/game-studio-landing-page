@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Makers of Hay Day, Clash of Clans, Boom Beach, Clash Royale and Brawl Stars.">
+<title>About | Supercell</title>
+<link rel="stylesheet" href="/assets/style/main.css"/><script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ["Barlow", "Barlow Condensed"]
+    }
+  });
+</script>
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+	<a href="/" class="logo" aria-label="Supercell Logo">
+		<img src="/assets/images/logo.png" alt="Logo"/>
+  </a>
+
+  <nav class="nav">
+    <ul class="nav__menu">
+      <li class="nav__menu__item">
+          <a href="/">Home</a>
+        </li>
+      <li class="nav__menu__item">
+          <a href="/about/" aria-current="page">About</a>
+        </li>
+      <li class="nav__menu__item">
+          <a href="/games/">Games</a>
+        </li>
+      <li class="nav__menu__item">
+          <a href="/blog/">Blog</a>
+        </li>
+      </ul>
+
+    <button class="nav__menu__toggler">
+      <svg width="24" height="15" fill="black">
+        <rect width="24" height="2"></rect>
+        <rect width="24" height="2" y="6"></rect>
+        <rect width="24" height="2" y="12"></rect>
+      </svg>
+    </button>
+  </nav>
+</div>
+
+    </header>
+
+    <main class="safe-top">
+        <div class="container">
+          
+
+
+
+  <div class="section-header">
+    <small class="section-header__small">The Art Of Creating Games</small>
+    <h1 class="section-header__title">SUPERCELL</h1>
+    <p>Makers of Hay Day, Clash of Clans, Boom Beach, Clash Royale and Brawl Stars.</p>
+  </div>
+
+
+<div class="profile__showcase">
+  
+  <div class="profile">
+    <picture><source type="image/webp" srcset="/assets/images/Cricket_Green-320w.webp 320w, /assets/images/Cricket_Green-768w.webp 768w" sizes="100w"><source type="image/jpeg" srcset="/assets/images/Cricket_Green-320w.jpeg 320w, /assets/images/Cricket_Green-768w.jpeg 768w" sizes="100w"><img alt="Cricket" draggable="false" src="/assets/images/Cricket_Green-320w.jpeg" width="768" height="790"></picture>
+    <div class="profile__content">
+      <h4 class="profile__content__title">Lorem</h4>
+      <small>Designer</small>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In numquam nulla asperiores vel voluptatum nisi a quas quis molestias provident nobis nostrum pariatur enim ducimus neque fugiat, possimus mollitia commodi?</p>
+    </div>
+  </div>
+
+</div>
+        </div>
+      </main>
+
+    <footer>
+      <div class="container">
+  <div class="footer-row">
+
+    <div class="footer-col footer-col--logo">
+			<a href="/" class="logo">
+				<img src="/assets/images/logo.png" alt="Logo"/>
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h5 class="footer-col__title">Menu</h5>
+      <ul class="footer-col__menu small">
+        
+          <li>
+            <a href="/.">Home</a>
+          </li>
+        
+          <li>
+            <a href="/about">About</a>
+          </li>
+        
+          <li>
+            <a href="/games">Games</a>
+          </li>
+        
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+        
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5 class="footer-col__title">Social Media</h5>
+      <ul class="footer-col__menu small">
+        
+          <li>
+            <a href="/facebook">Facebook</a>
+          </li>
+        
+          <li>
+            <a href="/twitter">Twitter</a>
+          </li>
+        
+          <li>
+            <a href="/itch.io">Itch.io</a>
+          </li>
+        
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <a href="#" aria-label="Go to top">
+				<img class="go-to-top" src="/assets/images/arrow-top.svg" alt="Go To Top">
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-row footer-row--end small">
+    <div class="footer-col">
+      <small>Copyright &copy; 2022 <a href="https://github.com/cemalgnlts" class="sign" target="_blank">cemalgnlts</a>. All Rights Reserverd.</small>
+    </div>
+    <div class="footer-col">
+      <small>
+        <a href="#" alt="Terms of Use">Terms of Use</a>
+        <a href="#" alt="Privacy Policy">Privacy Policy</a>
+      </small>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    <script>
+      const menuToggler = document.querySelector(".nav__menu__toggler");
+      const header = document.querySelector(".header");
+      const menu = document.querySelector(".nav__menu");
+
+      menuToggler.onclick = () => {
+        const isOpened = menu
+          .classList
+          .toggle("active");
+        menuToggler.setAttribute(
+          "aria-expanded", isOpened
+          ? "true"
+          : "false");
+      }
+
+      window.onscroll = () => {
+        if (window.scrollY > 5) {
+          if (!header.classList.contains("header--small")) 
+            header
+              .classList
+              .add("header--small");
+          }
+        else if (header.classList.contains("header--small")) {
+          header
+            .classList
+            .remove("header--small");
+        }
+      }
+    </script>
+  </body>
+</html>

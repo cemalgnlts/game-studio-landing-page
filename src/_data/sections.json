@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "The Art Of Creating Games",
+    "header": "SUPERCELL",
+    "desc": "Makers of Hay Day, Clash of Clans, Boom Beach, Clash Royale and Brawl Stars.",
+    "ctaButtonText": "See Games",
+    "ctaButtonHref": "/games"
+  },
+  "info": {
+    "title": "Info",
+    "header": "Who We Are",
+    "desc": "Information for we."
+  },
+  "games": {
+    "title": "Explore Our Games",
+    "header": "Games",
+    "desc": "Our dream is to create games that as many people as possible play for years and that are remembered forever.",
+    "readMoreButtonText": "Explore More",
+    "readMoreButtonUrl": "/games",
+    "showcase": [
+      "Hay Day",
+      "Clash of Clans",
+      "Brawl Stars"
+    ]
+  },
+  "comments": {
+    "title": "Reviews",
+    "header": "People Reviews Of Our Games",
+    "desc": "What peoples says about our games."
+  },
+  "blog": {
+    "title": "Blog",
+    "header": "Follow The Developments",
+    "desc": "Our latest blog posts.",
+    "readMoreButtonText": "Explore More",
+    "readMoreButtonUrl": "/blog"
+  }
+}

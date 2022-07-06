@@ -1,0 +1,67 @@
+{% macro sectionHeader(section) %}
+  <div class="section-header">
+    <small class="section-header__small">{{section.title}}</small>
+    <h1 class="section-header__title">{{section.header}}</h1>
+    <p>{{section.desc}}</p>
+  </div>
+{% endmacro %}
+
+{% macro gameCard(game) %}
+  <div class="card">
+    <div class="card__header" aria-hidden="true">
+      {% image "./assets/covers/" + game.cover,
+      game.title+" cover image",
+      false,
+      false,
+      "(max-width: 768px) 320px,
+       (min-width: 768px) 768px, 
+       (min-width: 1024px) 1024px" %}
+    </div>
+    <div class="card__content">
+      <span class="card__content__category">{{game.category}}</span>
+      <h3 class="card__content__title">
+        <a href="{{game.link}}">{{game.title}}</a>
+      </h3>
+      <a href="{{game.link}}">Play Now!</a>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro commentCard(comment) %}
+  <div class="card card--small">
+    <div class="card__content">
+      <span class="card__content__category">{{comment.user}}</span>
+      <blockquote class="card__content__message">{{comment.message}}</blockquote>
+      <a href="{{comment.game | findGameLink}}">{{comment.game}}</a>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro blogpostCard(blogpost) %}
+  <div class="card">
+    <div class="card__header card__header--fit" aria-hidden="true">
+      {% image "./assets/blog/" + blogpost.data.cover,
+      "",
+      "lazy",
+      "async" %}
+    </div>
+    <div class="card__content">
+      <h3 class="card__content__title">
+        <a href="{{blogpost.url}}">{{blogpost.data.title}}</a>
+      </h3>
+      <span class="card__content__category">{{blogpost.data.desc | truncate(97, true)}}</span>
+      <a href="{{blogpost.url}}">Read More</a>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro profileCard(profile) %}
+  <div class="profile">
+    {% image "./assets/images/Cricket_Green.png", "Cricket" %}
+    <div class="profile__content">
+      <h4 class="profile__content__title">Lorem</h4>
+      <small>Designer</small>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In numquam nulla asperiores vel voluptatum nisi a quas quis molestias provident nobis nostrum pariatur enim ducimus neque fugiat, possimus mollitia commodi?</p>
+    </div>
+  </div>
+{% endmacro %}

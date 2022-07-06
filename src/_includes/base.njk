@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/head.njk" %}
+  </head>
+  <body>
+    <header class="header">
+      {% include "partials/header.njk" %}
+    </header>
+
+    <main{% if safeMargin %} class="safe-top"{% endif %}>
+      {%- block main %}
+        <div class="container">
+          {{ content | safe }}
+        </div>
+      {% endblock -%}
+    </main>
+
+    <footer>
+      {% include "partials/footer.njk" %}
+    </footer>
+
+    <script>
+      const menuToggler = document.querySelector(".nav__menu__toggler");
+      const header = document.querySelector(".header");
+      const menu = document.querySelector(".nav__menu");
+
+      menuToggler.onclick = () => {
+        const isOpened = menu
+          .classList
+          .toggle("active");
+        menuToggler.setAttribute(
+          "aria-expanded", isOpened
+          ? "true"
+          : "false");
+      }
+
+      window.onscroll = () => {
+        if (window.scrollY > 5) {
+          if (!header.classList.contains("header--small")) 
+            header
+              .classList
+              .add("header--small");
+          }
+        else if (header.classList.contains("header--small")) {
+          header
+            .classList
+            .remove("header--small");
+        }
+      }
+    </script>
+  </body>
+</html>

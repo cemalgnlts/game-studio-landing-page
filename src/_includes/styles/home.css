@@ -1,0 +1,367 @@
+/* #region common */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.section-header__small {
+  text-transform: uppercase;
+}
+
+.section-header__title {
+  margin: 0.4em 0;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--border-radius);
+  transition: box-shadow 250ms;
+  overflow: hidden;
+}
+
+.card--small {
+  min-height: 12em;
+  margin-right: 1em;
+  aspect-ratio: unset;
+}
+
+.card--small .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0;
+  top: 0;
+}
+
+.card.card--small:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card:hover {
+  border-color: var(--bg-color);
+  box-shadow: 0px 10px 15px 0px rgba(53, 63, 66, 0.04),
+    0px 15px 20px 0px rgba(52, 63, 67, 0.06),
+    -1px 20px 25px 0px rgba(57, 68, 71, 0.08),
+    0px 25px 30px 0px rgba(27, 31, 34, 0.01);
+}
+
+.card:hover .card__content {
+  background-color: #fff;
+}
+
+.card__header {
+  height: calc(100% - var(--border-radius));
+  overflow: hidden;
+}
+
+.card__header img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+  -o-object-fit: contain;
+  -o-object-position: top;
+  aspect-ratio: 1 / 1;
+}
+
+@supports not (aspect-ratio: 1/1) {
+  .card__header img:before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+  }
+
+  .card__header img:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.card__header.card__header--fit img {
+  object-fit: cover;
+  object-position: center;
+  -o-object-fit: cover;
+  -o-object-position: center;
+}
+
+.card__content {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 1em;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all 250ms;
+}
+
+.card__content__category,
+.card__content > a {
+  color: #545559;
+}
+
+.card__content__category {
+  text-transform: uppercase;
+  display: inline-block;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+.card__content__title {
+  margin-top: 0.28em;
+  margin-bottom: 0.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__content__title > a {
+  color: inherit;
+  transition: color 250ms;
+}
+
+.card__content__title > a:hover {
+  color: var(--accent-color);
+}
+
+.card__content > a {
+  text-decoration: none;
+  display: inline-block;
+  transition: all 250ms;
+}
+
+.card__content > a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON--EXPLORE */
+.btn--explore {
+  position: relative;
+  display: flex;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  box-shadow: none !important;
+  z-index: 0;
+  overflow: visible;
+  transition: padding 100ms;
+  text-transform: uppercase;
+  grid-column: 1 / -1;
+}
+
+.btn--explore a {
+  color: inherit;
+}
+
+.btn--explore:hover {
+  padding-left: 2em;
+  padding-right: 4em;
+}
+
+.btn--explore::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: -15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 3em;
+  background: var(--btn-bg-color);
+  transition-property: left, top, width, height;
+  transition-duration: 250ms;
+  z-index: -1;
+}
+
+.btn--explore:hover::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn--explore::after {
+  content: "\2192";
+  font-size: 2rem;
+  position: absolute;
+  right: -10px;
+  top: -0.2rem;
+  transition: right 250ms;
+}
+
+.btn--explore:hover::after {
+  right: 10px;
+}
+/* #endregion */
+
+/* #region hero */
+.hero {
+  position: relative;
+  padding: 10em 0;
+  z-index: 1;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.hero .container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url(/assets/images/bg_hero_frontpage_narrow.jpg) #f6f6f6 bottom no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.hero .section-header {
+  margin-top: 1em;
+}
+
+a.hero__cta {
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+  transition: padding 250ms;
+  padding: 1em 3em;
+  border-radius: 3em;
+  background-color: var(--btn-bg-color) !important;
+}
+
+.hero__cta:hover,
+.hero__cta:focus {
+  padding-left: 2.5em;
+  padding-right: 3.5em;
+}
+
+.hero__cta::before,
+.hero__cta::after {
+  content: "\2192";
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  transition: transform 250ms;
+}
+
+.hero__cta::before {
+  left: 0;
+  transform: translateX(-30%);
+}
+
+.hero__cta::after {
+  right: 0;
+  transform: translateX(50%);
+}
+
+.hero__cta:hover::after,
+.hero__cta:focus::after {
+  transform: translateX(-30%);
+}
+
+.hero__cta:hover::before,
+.hero__cta:focus::before {
+  transform: translateX(-100%);
+}
+
+.hero__cta a {
+  color: inherit;
+}
+
+.hero__arrow-down {
+  position: absolute;
+  left: 50%;
+  bottom: 17.5%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+/* #endregion */
+
+/* #region games */
+#our-games {
+  scroll-margin-top: 3em;
+}
+
+.games {
+  /* background-color: mistyrose; */
+  padding: 3em 0;
+}
+
+.games__showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  gap: 2em;
+  padding: 1em 0;
+}
+
+.games__showcase .card__content__category {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* #endregion */
+
+/* #region comments */
+.comments {
+  background-color: #9FC9DD;
+  padding: 3em 0;
+}
+
+.comments__showcase {
+  overflow: scroll;
+  width: 100%;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  padding: 1em;
+}
+
+.comments__showcase .card--small {
+  display: flex;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  flex-basis: 100%;
+}
+
+.comments__showcase .card--small:last-child {
+  margin-right: 0;
+}
+/* #endregion */
+
+/* #region blog */
+.blog {
+  /* background-color: linen; */
+  padding: 3em 0;
+}
+
+.blog__showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  padding: 1em 0;
+  grid-gap: 2em;
+}
+
+.blog__showcase .card__content__title {
+  margin-top: 0;
+}
+
+.blog__showcase .card__content__category {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  text-transform: none;
+  max-height: calc((1rem * 1.5) * 3);
+}
+/* #endregion */
