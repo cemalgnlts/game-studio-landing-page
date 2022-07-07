@@ -791,7 +791,7 @@ article p + p {
 
 @media screen and (min-width: 450px) {
   .hero .container::before {
-    background-image: url("/assets/images/bg_hero_frontpage.jpg");
+    background-image: url("/game-developer-page/assets/images/bg_hero_frontpage.jpg"), url("/assets/images/bg_hero_frontpage.jpg");
     background-position: bottom;
   }
 }
@@ -887,7 +887,7 @@ article p + p {
 
 @media screen and (min-width: 768px) {
   .hero .container::before {
-    background-image: url("/assets/images/bg_hero_frontpage.jpg");
+    background-image: url("/game-developer-page/assets/images/bg_hero_frontpage.jpg"), url("/assets/images/bg_hero_frontpage.jpg");
     background-position: center;
   }
   
