@@ -16,7 +16,7 @@
     </div>
 
     <a class="hero__arrow-down" href="#our-games">
-			<img src="{{"/assets/images/arrow-down.svg" | url}}" alt="Scroll to games section.">
+      <img src="{{"/assets/images/arrow-down.svg" | url}}" alt="Scroll to games section.">
     </a>
   </section>
   {# /HERO #}
@@ -32,19 +32,14 @@
         {% endfor %}
       </div>
 
-      <a href="{{sections.games.readMoreButtonUrl | url}}">
-        <button class="btn btn--explore">{{sections.games.readMoreButtonText}}</button>
-      </a>
+      <button class="btn btn--explore">
+        <a href="{{sections.games.readMoreButtonUrl | url}}">
+          {{sections.games.readMoreButtonText}}
+        </a>
+      </button>
     </div>
   </section>
   {# /GAMES #}
-
-  {# <section>
-    <div class="container">
-      <h2>Smashboard</h2>
-      <button class="btn">GET NOW</button>
-    </div>
-  </section> #}
 
   {# COMMENTS #}
   <section class="comments">
@@ -71,9 +66,11 @@
         {% endfor %}
       </div>
 
-      <a href="{{sections.blog.readMoreButtonUrl | url}}">
-        <button class="btn btn--explore">{{sections.blog.readMoreButtonText}}</button>
-      </a>
+      <button class="btn btn--explore">
+        <a href="{{sections.blog.readMoreButtonUrl | url}}">
+          {{sections.blog.readMoreButtonText}}
+        </a>
+      </button>
     </div>
   </section>
   {# /BLOG #}
