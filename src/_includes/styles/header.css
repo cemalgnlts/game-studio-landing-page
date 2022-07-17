@@ -49,18 +49,15 @@ header .logo img {
   left: 0;
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   top: calc(100% - var(--border-radius));
-  background: var(--bg-color);
+  background-color: var(--nav-bg-color);
   text-align: center;
-  /*display: none;*/
-	transition: transform 250ms;
-	transform-origin: top;
-	transform: scaleY(0);
+  display: none;
   list-style-type: none;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
 .nav__menu.active {
-	transform: scaleY(1);
+	display: block;
 }
 
 .nav__menu__item {

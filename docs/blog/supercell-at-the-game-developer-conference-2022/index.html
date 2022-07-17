@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="Makers of Hay Day, Clash of Clans, Boom Beach, Clash Royale and Brawl Stars.">
 <title>SUPERCELL AT THE GAME DEVELOPER CONFERENCE 2022 | Supercell</title>
-<link rel="stylesheet" href="/game-developer-studio-page/assets/style/main.css"/><script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<link rel="shortcut icon" href="/assets/images/logo.png" type="image/png">
+<link rel="stylesheet" href="/game-studio-landing-page/assets/style/main.css"/><script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
 <script>
   WebFont.load({
     google: {
@@ -19,23 +20,23 @@
   <body>
     <header class="header">
       <div class="container">
-	<a href="/game-developer-studio-page/" class="logo" aria-label="Supercell Logo">
-		<img src="/game-developer-studio-page/assets/images/logo.png" alt="Logo"/>
+	<a href="/game-studio-landing-page/" class="logo" aria-label="Supercell Logo">
+		<img src="/game-studio-landing-page/assets/images/logo.png" alt="Logo"/>
   </a>
 
   <nav class="nav">
     <ul class="nav__menu">
       <li class="nav__menu__item">
-          <a href="/game-developer-studio-page/">Home</a>
+          <a href="/game-studio-landing-page/">Home</a>
         </li>
       <li class="nav__menu__item">
-          <a href="/game-developer-studio-page/about/">About</a>
+          <a href="/game-studio-landing-page/about/">About</a>
         </li>
       <li class="nav__menu__item">
-          <a href="/game-developer-studio-page/games/">Games</a>
+          <a href="/game-studio-landing-page/games/">Games</a>
         </li>
       <li class="nav__menu__item">
-          <a href="/game-developer-studio-page/blog/">Blog</a>
+          <a href="/game-studio-landing-page/blog/">Blog</a>
         </li>
       </ul>
 
@@ -61,10 +62,9 @@
         <picture><source type="image/webp" srcset="/game-developer-studio-page/assets/images/news_thumbnail_gdc-480w.webp 480w, /game-developer-studio-page/assets/images/news_thumbnail_gdc-768w.webp 768w, /game-developer-studio-page/assets/images/news_thumbnail_gdc-1024w.webp 1024w" sizes="100w"><source type="image/jpeg" srcset="/game-developer-studio-page/assets/images/news_thumbnail_gdc-480w.jpeg 480w, /game-developer-studio-page/assets/images/news_thumbnail_gdc-768w.jpeg 768w, /game-developer-studio-page/assets/images/news_thumbnail_gdc-1024w.jpeg 1024w" sizes="100w"><img alt="Cover" draggable="false" src="/game-developer-studio-page/assets/images/news_thumbnail_gdc-480w.jpeg" width="1024" height="473"></picture>
       </div>
 
-      <p>Like it has been in the past two days, we will be attending a local game fair called GameX Dijital Oyun ve Eğlence Fuarı for the weekend. We have already collected a fair amount of feedback from those who had a visit to our stand, and we think that things are looking great in terms of Smashboard, the game we currently develop.</p>
-<p>In between the days of the convention, we develop and fix certain parts of the game to get more viable feedback the day after. So far, we have observed that Smashboard is a challenging but rewarding game. Considering that Smashboard is a game inspired by the souls-like genre in terms of its design, we are happy that we have achieved what we wanted to achieve!</p>
-<p>Even if you cannot come to visit us at the convention to play Smashboard, you can join our Discord server to experience an updated version of it daily!</p>
-<p>Discord: https://lnkd.in/dYKzew6v</p>
+      <p>When we began to make our current game project, everything started with a brainstorming session. This is the first big step in the game development process at Supercell, and the teams here go about it in a way that is true to our values. When brainstorming, it is essential to remember that we should not be too critical of the ideas that we present, and the brainstormers should not overthink too much.</p>
+<p>As long as our board of digital post-it notes gets filled with something seemingly reasonable, we are off to a great start. It is also helpful if the group of brainstormers comes from diverse backgrounds. This usually makes the ideas more diverse and brings up different perspectives. Together with the levels of responsibility and freedom that we spoke about last time, this diversity makes brainstorming a great time for the team to explore new ideas and try things out.</p>
+<p>When the board is full of ideas, it is time to dissect! This stage of the process requires lots of diligence and attention to detail. One by one, we take every idea on the board and think about its aspects. What is good about it, and what could be improved. We also think if it is possible to implement the idea in practice and the best way to do it.</p>
 
     </article>
   </div>
@@ -75,8 +75,8 @@
   <div class="footer-row">
 
     <div class="footer-col footer-col--logo">
-			<a href="/game-developer-studio-page/" class="logo">
-				<img src="/game-developer-studio-page/assets/images/logo.png" alt="Logo"/>
+			<a href="/game-studio-landing-page/" class="logo">
+				<img src="/game-studio-landing-page/assets/images/logo.png" alt="Logo"/>
       </a>
     </div>
 
@@ -124,7 +124,7 @@
 
     <div class="footer-col">
       <a href="#" aria-label="Go to top">
-				<img class="go-to-top" src="/game-developer-studio-page/assets/images/arrow-top.svg" alt="Go To Top">
+				<img class="go-to-top" src="/game-studio-landing-page/assets/images/arrow-top.svg" alt="Go To Top">
       </a>
     </div>
 
@@ -151,28 +151,15 @@
       const menu = document.querySelector(".nav__menu");
 
       menuToggler.onclick = () => {
-        const isOpened = menu
-          .classList
-          .toggle("active");
-        menuToggler.setAttribute(
-          "aria-expanded", isOpened
-          ? "true"
-          : "false");
+        const isActive = menu.classList.toggle("active");
+
+        menuToggler.setAttribute("aria-expanded", isActive);
+
+        if(isActive && !header.classList.contains("header--small"))
+          header.classList.toggle("header--small");
       }
 
-      window.onscroll = () => {
-        if (window.scrollY > 5) {
-          if (!header.classList.contains("header--small")) 
-            header
-              .classList
-              .add("header--small");
-          }
-        else if (header.classList.contains("header--small")) {
-          header
-            .classList
-            .remove("header--small");
-        }
-      }
+      window.onscroll = () => header.classList.toggle("header--small", window.scrollY > 5);
     </script>
   </body>
 </html>

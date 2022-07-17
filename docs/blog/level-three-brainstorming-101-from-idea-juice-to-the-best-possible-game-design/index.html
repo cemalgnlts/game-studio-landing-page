@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="Makers of Hay Day, Clash of Clans, Boom Beach, Clash Royale and Brawl Stars.">
 <title>LEVEL THREE – BRAINSTORMING 101: FROM IDEA JUICE TO THE BEST POSSIBLE GAME DESIGN | Supercell</title>
-<link rel="stylesheet" href="/game-developer-studio-page/assets/style/main.css"/><script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
+<link rel="shortcut icon" href="/assets/images/logo.png" type="image/png">
+<link rel="stylesheet" href="/game-studio-landing-page/assets/style/main.css"/><script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"></script>
 <script>
   WebFont.load({
     google: {
@@ -19,23 +20,23 @@
   <body>
     <header class="header">
       <div class="container">
-	<a href="/game-developer-studio-page/" class="logo" aria-label="Supercell Logo">
-		<img src="/game-developer-studio-page/assets/images/logo.png" alt="Logo"/>
+	<a href="/game-studio-landing-page/" class="logo" aria-label="Supercell Logo">
+		<img src="/game-studio-landing-page/assets/images/logo.png" alt="Logo"/>
   </a>
 
   <nav class="nav">
     <ul class="nav__menu">
       <li class="nav__menu__item">
-          <a href="/game-developer-studio-page/">Home</a>
+          <a href="/game-studio-landing-page/">Home</a>
         </li>
       <li class="nav__menu__item">
-          <a href="/game-developer-studio-page/about/">About</a>
+          <a href="/game-studio-landing-page/about/">About</a>
         </li>
       <li class="nav__menu__item">
-          <a href="/game-developer-studio-page/games/">Games</a>
+          <a href="/game-studio-landing-page/games/">Games</a>
         </li>
       <li class="nav__menu__item">
-          <a href="/game-developer-studio-page/blog/">Blog</a>
+          <a href="/game-studio-landing-page/blog/">Blog</a>
         </li>
       </ul>
 
@@ -86,8 +87,8 @@
   <div class="footer-row">
 
     <div class="footer-col footer-col--logo">
-			<a href="/game-developer-studio-page/" class="logo">
-				<img src="/game-developer-studio-page/assets/images/logo.png" alt="Logo"/>
+			<a href="/game-studio-landing-page/" class="logo">
+				<img src="/game-studio-landing-page/assets/images/logo.png" alt="Logo"/>
       </a>
     </div>
 
@@ -135,7 +136,7 @@
 
     <div class="footer-col">
       <a href="#" aria-label="Go to top">
-				<img class="go-to-top" src="/game-developer-studio-page/assets/images/arrow-top.svg" alt="Go To Top">
+				<img class="go-to-top" src="/game-studio-landing-page/assets/images/arrow-top.svg" alt="Go To Top">
       </a>
     </div>
 
@@ -162,28 +163,15 @@
       const menu = document.querySelector(".nav__menu");
 
       menuToggler.onclick = () => {
-        const isOpened = menu
-          .classList
-          .toggle("active");
-        menuToggler.setAttribute(
-          "aria-expanded", isOpened
-          ? "true"
-          : "false");
+        const isActive = menu.classList.toggle("active");
+
+        menuToggler.setAttribute("aria-expanded", isActive);
+
+        if(isActive && !header.classList.contains("header--small"))
+          header.classList.toggle("header--small");
       }
 
-      window.onscroll = () => {
-        if (window.scrollY > 5) {
-          if (!header.classList.contains("header--small")) 
-            header
-              .classList
-              .add("header--small");
-          }
-        else if (header.classList.contains("header--small")) {
-          header
-            .classList
-            .remove("header--small");
-        }
-      }
+      window.onscroll = () => header.classList.toggle("header--small", window.scrollY > 5);
     </script>
   </body>
 </html>

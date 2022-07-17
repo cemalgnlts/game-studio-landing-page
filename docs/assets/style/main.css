@@ -246,18 +246,15 @@ header .logo img {
   left: 0;
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   top: calc(100% - var(--border-radius));
-  background: var(--bg-color);
+  background-color: var(--nav-bg-color);
   text-align: center;
-  /*display: none;*/
-	transition: transform 250ms;
-	transform-origin: top;
-	transform: scaleY(0);
+  display: none;
   list-style-type: none;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
 .nav__menu.active {
-	transform: scaleY(1);
+	display: block;
 }
 
 .nav__menu__item {
@@ -785,13 +782,18 @@ article {
   min-height: calc(100vh - 20.5em);
 }
 
-article p + p {
-  margin-top: 1rem;
+article p + p,
+article iframe {
+  margin-top: 1em;
+}
+
+article ul {
+  margin-bottom: 1em;
 }
 
 @media screen and (min-width: 450px) {
   .hero .container::before {
-    background-image: url("/game-developer-page/assets/images/bg_hero_frontpage.jpg"), url("/assets/images/bg_hero_frontpage.jpg");
+    background-image: url("/game-studio-landing-page/assets/images/bg_hero_frontpage.jpg"), url("/assets/images/bg_hero_frontpage.jpg");
     background-position: bottom;
   }
 }
@@ -809,7 +811,7 @@ article p + p {
   }
 
   .nav__menu {
-    /*display: block;*/
+    display: block;
 		transform: scaleY(1);
     position: unset;
     box-shadow: unset;
@@ -887,7 +889,7 @@ article p + p {
 
 @media screen and (min-width: 768px) {
   .hero .container::before {
-    background-image: url("/game-developer-page/assets/images/bg_hero_frontpage.jpg"), url("/assets/images/bg_hero_frontpage.jpg");
+    background-image: url("/game-studio-landing-page/assets/images/bg_hero_frontpage.jpg"), url("/assets/images/bg_hero_frontpage.jpg");
     background-position: center;
   }
   

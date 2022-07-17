@@ -50,7 +50,7 @@ module.exports = function (eleventyConfig) {
 
 	return {
 		markdownTemplateEngine: "njk",
-		pathPrefix: process.env.mode === "dev" ? "/" : "/game-developer-studio-page/",
+		pathPrefix: process.env.mode === "dev" ? "/" : "/game-studio-landing-page/",
 		dir: {
 			input: "src",
 			output: "docs"

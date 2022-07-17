@@ -4,11 +4,8 @@ cover: news_thumbnail_gdc.jpg
 date: 2022-05-21
 desc: "Update: If you have access to GDC Vault, you can find our presentations there now! Today marks the start of the Game Developer Conference in sunny (?) San Francisco. We welcome you to join us for."
 ---
+When we began to make our current game project, everything started with a brainstorming session. This is the first big step in the game development process at Supercell, and the teams here go about it in a way that is true to our values. When brainstorming, it is essential to remember that we should not be too critical of the ideas that we present, and the brainstormers should not overthink too much.
 
-Like it has been in the past two days, we will be attending a local game fair called GameX Dijital Oyun ve Eğlence Fuarı for the weekend. We have already collected a fair amount of feedback from those who had a visit to our stand, and we think that things are looking great in terms of Smashboard, the game we currently develop.
+As long as our board of digital post-it notes gets filled with something seemingly reasonable, we are off to a great start. It is also helpful if the group of brainstormers comes from diverse backgrounds. This usually makes the ideas more diverse and brings up different perspectives. Together with the levels of responsibility and freedom that we spoke about last time, this diversity makes brainstorming a great time for the team to explore new ideas and try things out.
 
-In between the days of the convention, we develop and fix certain parts of the game to get more viable feedback the day after. So far, we have observed that Smashboard is a challenging but rewarding game. Considering that Smashboard is a game inspired by the souls-like genre in terms of its design, we are happy that we have achieved what we wanted to achieve!
-
-Even if you cannot come to visit us at the convention to play Smashboard, you can join our Discord server to experience an updated version of it daily!
-
-Discord: https://lnkd.in/dYKzew6v
+When the board is full of ideas, it is time to dissect! This stage of the process requires lots of diligence and attention to detail. One by one, we take every idea on the board and think about its aspects. What is good about it, and what could be improved. We also think if it is possible to implement the idea in practice and the best way to do it.

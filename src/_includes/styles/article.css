@@ -18,6 +18,11 @@ article {
   min-height: calc(100vh - 20.5em);
 }
 
-article p + p {
-  margin-top: 1rem;
+article p + p,
+article iframe {
+  margin-top: 1em;
+}
+
+article ul {
+  margin-bottom: 1em;
 }

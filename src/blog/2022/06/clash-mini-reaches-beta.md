@@ -9,8 +9,9 @@ Eight months after our first announcement of 3 Clash games, two have reached bet
 
 Let’s cut to the chase: here’s a very special greeting from the dev team behind Clash Mini.
 
----
-*Hello everyone!
+\---
+
+<i>Hello everyone!
 
 Today is the day when we finally answer your legendary “When beta?” question with an  actual answer: starting on Monday Nov 8 (with a little variation from country to country)!
 
@@ -24,9 +25,9 @@ So what’s next for us? Well, now that we have the game ready to go out, it is 
 
 In order to get you introduced to the game, we have filmed a very relaxed in-studio “Smol Talk” – a video series that is going to be our deep-dive videos on topics that we would like to cover. The first video, where we would simply like to show you the basics of the game, is now live! We will then take it from there and use Smol Talk as a platform for addressing any feedback as well as reveal more information about the future in the next episodes.
 
-Once again, from the bottom of our hearts from everyone here in the Clash Mini team: Thank you for sticking around with us thus far. See you on the battle boards!*
+Once again, from the bottom of our hearts from everyone here in the Clash Mini team: Thank you for sticking around with us thus far. See you on the battle boards!</i>
 
----
+\---
 
 We’re thrilled to get Clash Mini in your hands. As much as we’d love to open it up for the whole world at once, as always, beta releases start slowly, so please bear with us as the dev team makes sure the game’s running as intended before they decide to open it up for territories outside the Nordics and Canada.
 
@@ -35,7 +36,6 @@ We’re thrilled to get Clash Mini in your hands. As much as we’d love to open
 It’s been 220 days (not that we’re counting) since we announced THREE Clash games to the world in one go: Clash Quest, Clash Mini and Clash Heroes. Now that Mini’s reached beta stage, what’s up with the other two games?
 
 Just hit play below and watch our Community Managers Vlad and Darian give you the full low-down.
-
 
 <iframe width="560" height="315" display=block src="https://www.youtube.com/embed/WwoWw_jhp7s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -26,28 +26,15 @@
       const menu = document.querySelector(".nav__menu");
 
       menuToggler.onclick = () => {
-        const isOpened = menu
-          .classList
-          .toggle("active");
-        menuToggler.setAttribute(
-          "aria-expanded", isOpened
-          ? "true"
-          : "false");
+        const isActive = menu.classList.toggle("active");
+
+        menuToggler.setAttribute("aria-expanded", isActive);
+
+        if(isActive && !header.classList.contains("header--small"))
+          header.classList.toggle("header--small");
       }
 
-      window.onscroll = () => {
-        if (window.scrollY > 5) {
-          if (!header.classList.contains("header--small")) 
-            header
-              .classList
-              .add("header--small");
-          }
-        else if (header.classList.contains("header--small")) {
-          header
-            .classList
-            .remove("header--small");
-        }
-      }
+      window.onscroll = () => header.classList.toggle("header--small", window.scrollY > 5);
     </script>
   </body>
 </html>
