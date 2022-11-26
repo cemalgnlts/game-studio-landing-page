@@ -222,7 +222,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: url(/assets/images/bg_hero_frontpage_narrow.jpg) #f6f6f6 bottom no-repeat;
+  background: url(../images/bg_hero_frontpage_narrow.jpg) #f6f6f6 bottom no-repeat;
   background-size: contain;
   z-index: -1;
 }
